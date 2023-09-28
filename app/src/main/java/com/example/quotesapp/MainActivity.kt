@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         override fun didFetch(response: List<QuotesResponse>, message: String) {
             dialog?.dismiss()
             binding.recyclerView.setHasFixedSize(true)
-            binding.recyclerView.layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
+            binding.recyclerView.layoutManager = StaggeredGridLayoutManager(1, LinearLayoutManager.VERTICAL)
             val adapter = QuotesListAdapter(this@MainActivity, response, copyListener)
             binding.recyclerView.adapter = adapter
         }
